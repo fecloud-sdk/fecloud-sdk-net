@@ -28,6 +28,10 @@ jobs:
       run: |
         version=$(cat source/VERSION)
         echo "version ${version} found."
+
+        echo 'ls'
+        ls -al target
+        
         # Organize the content
         find target/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*' | xargs -I '{}' rm -rf '{}'
         find source/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*|.cid|.codecheck|buildscript' | xargs -I '{}' cp -a '{}' target/
