@@ -35,7 +35,7 @@ jobs:
         # Organize the content
         find target/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*' | xargs -I '{}' rm -rf '{}'
         find source/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*|.cid|.codecheck|buildscript' | xargs -I '{}' cp -a '{}' target/
-        cd target x
+        cd target
         echo '-----BEGIN CONTENTS IN CURRENT DIR-----'
         ls -a
         echo '-----END CONTENTS IN CURRENT DIR-----'
