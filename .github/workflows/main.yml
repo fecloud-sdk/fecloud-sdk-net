@@ -34,7 +34,7 @@ jobs:
         echo 'ls -al source'
         ls -al source
         # Organize the content
-        find target/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*' | xargs -I '{}' rm -rf '{}'
+         #find target/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*' | xargs -I '{}' rm -rf '{}'
         find source/ -maxdepth 1 -mindepth 1  | grep -Ev '*git*|.cid|.codecheck|buildscript' | xargs -I '{}' cp -a '{}' target/
 
         echo 'or'
@@ -57,13 +57,13 @@ jobs:
         then
           current_time=$(date)
           git commit -m "synchronized at ${current_time}"
-          git push origin master
+          git push origin feature-action
           echo "daily synchronization finished."
         else
           commit_msg="release ${version} source code"
           git commit -m "$commit_msg"
           git tag -a "$tag_name" -m "$commit_msg"
-          git push origin master "$tag_name"
+          git push origin feature-action "$tag_name"
           echo "push tag ${tag_name} success."
           curl -L \
           -X POST \
