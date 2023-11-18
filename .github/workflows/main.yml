@@ -57,13 +57,13 @@ jobs:
         then
           current_time=$(date)
           git commit -m "synchronized at ${current_time}"
-          git push origin master
+          git push origin main
           echo "daily synchronization finished."
         else
           commit_msg="release ${version} source code"
           git commit -m "$commit_msg"
           git tag -a "$tag_name" -m "$commit_msg"
-          git push origin master "$tag_name"
+          git push origin main "$tag_name"
           echo "push tag ${tag_name} success."
           curl -L \
           -X POST \
