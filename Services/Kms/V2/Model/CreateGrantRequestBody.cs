@@ -6,19 +6,15 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
     /// </summary>
     public class CreateGrantRequestBody 
     {
-        /// <summary>
-        /// 授权类型。有效值：“user”，“domain”。默认值为“user”。
-        /// </summary>
-        /// <value>授权类型。有效值：“user”，“domain”。默认值为“user”。</value>
         [JsonConverter(typeof(EnumClassConverter<GranteePrincipalTypeEnum>))]
         public class GranteePrincipalTypeEnum
         {
@@ -131,44 +127,23 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
         }
 
 
-        /// <summary>
-        /// 密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
-        /// </summary>
         [JsonProperty("key_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyId { get; set; }
 
-        /// <summary>
-        /// 被授权用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-        /// </summary>
         [JsonProperty("grantee_principal", NullValueHandling = NullValueHandling.Ignore)]
         public string GranteePrincipal { get; set; }
 
-        /// <summary>
-        /// 授权允许的操作列表。 有效的值：“create-datakey”，“create-datakey-without-plaintext”，“encrypt-datakey”，“decrypt-datakey”，“describe-key”，“create-grant”，“retire-grant”，“encrypt-data”，“decrypt-data”。 有效值不能仅为“create-grant”。
-        /// </summary>
         [JsonProperty("operations", NullValueHandling = NullValueHandling.Ignore)]
         public List<string> Operations { get; set; }
 
-        /// <summary>
-        /// 授权名称，取值1到255字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”。
-        /// </summary>
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// 可退役授权的用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-        /// </summary>
         [JsonProperty("retiring_principal", NullValueHandling = NullValueHandling.Ignore)]
         public string RetiringPrincipal { get; set; }
 
-        /// <summary>
-        /// 授权类型。有效值：“user”，“domain”。默认值为“user”。
-        /// </summary>
         [JsonProperty("grantee_principal_type", NullValueHandling = NullValueHandling.Ignore)]
         public GranteePrincipalTypeEnum GranteePrincipalType { get; set; }
-        /// <summary>
-        /// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-        /// </summary>
         [JsonProperty("sequence", NullValueHandling = NullValueHandling.Ignore)]
         public string Sequence { get; set; }
 

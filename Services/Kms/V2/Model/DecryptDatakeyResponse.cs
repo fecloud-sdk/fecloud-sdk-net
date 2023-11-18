@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,21 +16,12 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class DecryptDatakeyResponse : SdkResponse
     {
 
-        /// <summary>
-        /// DEK明文的16进制字符串。
-        /// </summary>
         [JsonProperty("data_key", NullValueHandling = NullValueHandling.Ignore)]
         public string DataKey { get; set; }
 
-        /// <summary>
-        /// DEK明文字节长度。
-        /// </summary>
         [JsonProperty("datakey_length", NullValueHandling = NullValueHandling.Ignore)]
         public string DatakeyLength { get; set; }
 
-        /// <summary>
-        /// DEK明文的SHA256值对应的16进制字符串。
-        /// </summary>
         [JsonProperty("datakey_dgst", NullValueHandling = NullValueHandling.Ignore)]
         public string DatakeyDgst { get; set; }
 

@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,15 +16,9 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ListKmsByTagsResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 资源实例列表，详情请参见resource字段数据结构说明。
-        /// </summary>
         [JsonProperty("resources", NullValueHandling = NullValueHandling.Ignore)]
         public List<ActionResources> Resources { get; set; }
 
-        /// <summary>
-        /// 总记录数。
-        /// </summary>
         [JsonProperty("total_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? TotalCount { get; set; }
 

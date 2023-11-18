@@ -6,19 +6,15 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
     /// </summary>
     public class CreateKeyRequestBody 
     {
-        /// <summary>
-        /// 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SM2
-        /// </summary>
-        /// <value>密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SM2</value>
         [JsonConverter(typeof(EnumClassConverter<KeySpecEnum>))]
         public class KeySpecEnum
         {
@@ -166,10 +162,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
             }
         }
 
-        /// <summary>
-        /// 密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
-        /// </summary>
-        /// <value>密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY</value>
         [JsonConverter(typeof(EnumClassConverter<KeyUsageEnum>))]
         public class KeyUsageEnum
         {
@@ -281,10 +273,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
             }
         }
 
-        /// <summary>
-        /// 密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
-        /// </summary>
-        /// <value>密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。</value>
         [JsonConverter(typeof(EnumClassConverter<OriginEnum>))]
         public class OriginEnum
         {
@@ -397,48 +385,24 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
         }
 
 
-        /// <summary>
-        /// 非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
-        /// </summary>
         [JsonProperty("key_alias", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyAlias { get; set; }
 
-        /// <summary>
-        /// 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SM2
-        /// </summary>
         [JsonProperty("key_spec", NullValueHandling = NullValueHandling.Ignore)]
         public KeySpecEnum KeySpec { get; set; }
-        /// <summary>
-        /// 密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
-        /// </summary>
         [JsonProperty("key_usage", NullValueHandling = NullValueHandling.Ignore)]
         public KeyUsageEnum KeyUsage { get; set; }
-        /// <summary>
-        /// 密钥描述，取值0到255字符。
-        /// </summary>
         [JsonProperty("key_description", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyDescription { get; set; }
 
-        /// <summary>
-        /// 密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
-        /// </summary>
         [JsonProperty("origin", NullValueHandling = NullValueHandling.Ignore)]
         public OriginEnum Origin { get; set; }
-        /// <summary>
-        /// 企业多项目ID。 - 用户未开通企业多项目时，不需要输入该字段。 - 用户开通企业多项目时，创建资源可以输入该字段。若用户户不输入该字段，默认创建属于默认企业多项目ID（ID为“0”）的资源。 注意：若用户没有默认企业多项目ID（ID为“0”）下的创建权限，则接口报错。
-        /// </summary>
         [JsonProperty("enterprise_project_id", NullValueHandling = NullValueHandling.Ignore)]
         public string EnterpriseProjectId { get; set; }
 
-        /// <summary>
-        /// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-        /// </summary>
         [JsonProperty("sequence", NullValueHandling = NullValueHandling.Ignore)]
         public string Sequence { get; set; }
 
-        /// <summary>
-        /// 密钥库ID，默认使用KMS默认密钥库
-        /// </summary>
         [JsonProperty("keystore_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeystoreId { get; set; }
 

@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Request Object
@@ -16,16 +16,10 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ListKmsByTagsRequest 
     {
 
-        /// <summary>
-        /// 资源实例，固定值为resource_instances
-        /// </summary>
         [SDKProperty("resource_instances", IsPath = true)]
         [JsonProperty("resource_instances", NullValueHandling = NullValueHandling.Ignore)]
         public string ResourceInstances { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         [SDKProperty("body", IsBody = true)]
         [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
         public ListKmsByTagsRequestBody Body { get; set; }

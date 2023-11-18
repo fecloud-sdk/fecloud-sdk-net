@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,27 +16,15 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class CreateParametersForImportResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 密钥ID。
-        /// </summary>
         [JsonProperty("key_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyId { get; set; }
 
-        /// <summary>
-        /// 密钥导入令牌。
-        /// </summary>
         [JsonProperty("import_token", NullValueHandling = NullValueHandling.Ignore)]
         public string ImportToken { get; set; }
 
-        /// <summary>
-        /// 导入参数到期时间，时间戳，即从1970年1月1日至该时间的总秒数。
-        /// </summary>
         [JsonProperty("expiration_time", NullValueHandling = NullValueHandling.Ignore)]
         public long? ExpirationTime { get; set; }
 
-        /// <summary>
-        /// 加密密钥材料的公钥，base64格式。
-        /// </summary>
         [JsonProperty("public_key", NullValueHandling = NullValueHandling.Ignore)]
         public string PublicKey { get; set; }
 

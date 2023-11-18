@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
@@ -16,21 +16,12 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class BatchCreateKmsTagsRequestBody 
     {
 
-        /// <summary>
-        /// 标签列表，key和value键值对的集合。
-        /// </summary>
         [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
         public List<TagItem> Tags { get; set; }
 
-        /// <summary>
-        /// 操作标识： 仅限于“create”和“delete”。
-        /// </summary>
         [JsonProperty("action", NullValueHandling = NullValueHandling.Ignore)]
         public string Action { get; set; }
 
-        /// <summary>
-        /// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-        /// </summary>
         [JsonProperty("sequence", NullValueHandling = NullValueHandling.Ignore)]
         public string Sequence { get; set; }
 

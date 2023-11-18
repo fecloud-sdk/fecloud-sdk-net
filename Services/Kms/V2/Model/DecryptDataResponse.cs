@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,21 +16,12 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class DecryptDataResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 密钥ID。
-        /// </summary>
         [JsonProperty("key_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyId { get; set; }
 
-        /// <summary>
-        /// 明文。
-        /// </summary>
         [JsonProperty("plain_text", NullValueHandling = NullValueHandling.Ignore)]
         public string PlainText { get; set; }
 
-        /// <summary>
-        /// 明文的Base64值，在非对称加密场景下，若加密的明文中含有不可见字符，则解密结果以该值为准。
-        /// </summary>
         [JsonProperty("plain_text_base64", NullValueHandling = NullValueHandling.Ignore)]
         public string PlainTextBase64 { get; set; }
 

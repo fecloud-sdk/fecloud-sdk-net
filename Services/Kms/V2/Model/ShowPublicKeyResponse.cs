@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,15 +16,9 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ShowPublicKeyResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 密钥ID。
-        /// </summary>
         [JsonProperty("key_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyId { get; set; }
 
-        /// <summary>
-        /// 公钥信息。
-        /// </summary>
         [JsonProperty("public_key", NullValueHandling = NullValueHandling.Ignore)]
         public string PublicKey { get; set; }
 

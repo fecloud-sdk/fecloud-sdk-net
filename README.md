@@ -2,19 +2,19 @@
 <a href="https://cloud.orange-business.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Orange_Business_Services_logo_%28left%29.svg"></a>
 </p>
 
-<h1 align="center">G42 Cloud .Net Software Development Kit (.Net SDK)</h1>
+<h1 align="center">FE Cloud .Net Software Development Kit (.Net SDK)</h1>
 
-The G42 Cloud .Net SDK allows you to easily work with G42 Cloud services such as Elastic Compute Service (ECS) and
+The FE Cloud .Net SDK allows you to easily work with FE Cloud services such as Elastic Compute Service (ECS) and
 Virtual Private Cloud(VPC) without the need to handle API related tasks.
 
-This document introduces how to obtain and use G42 Cloud .Net SDK.
+This document introduces how to obtain and use FE Cloud .Net SDK.
 
 ## Requirements
 
-- To use G42 Cloud .NET SDK, you must have G42 Cloud account as well as the Access Key (AK) and Secret key (SK) of the
-  G42 Cloud account. You can create an Access Key in the G42 Cloud console.
+- To use FE Cloud .NET SDK, you must have FE Cloud account as well as the Access Key (AK) and Secret key (SK) of the
+  FE Cloud account. You can create an Access Key in the FE Cloud console.
 
-- To use G42 Cloud .NET SDK to access the APIs of specific service, please make sure you do have activated the service 
+- To use FE Cloud .NET SDK to access the APIs of specific service, please make sure you do have activated the service 
   in [FE Cloud console](https://console.prod-cloud-ocb.orange-business.com/) if needed.
 
 - The .NET SDK requires：
@@ -26,20 +26,20 @@ This document introduces how to obtain and use G42 Cloud .Net SDK.
 Run the following commands to install .Net SDK:
 
 You must install `HuaweiCloud.SDK.Core` library no matter which product development kit you need to use. Take using VPC
-SDK for example, you need to install `HuaweiCloud.SDK.Core` library and `G42Cloud.SDK.Vpc` library:
+SDK for example, you need to install `HuaweiCloud.SDK.Core` library and `FECloud.SDK.Vpc` library:
 
 - Use .NET CLI
 
 ``` bash
 dotnet add package HuaweiCloud.SDK.Core
-dotnet add package G42Cloud.SDK.Vpc
+dotnet add package FECloud.SDK.Vpc
 ```
 
 - Use Package Manager
 
 ``` bash
 Install-Package HuaweiCloud.SDK.Core
-Install-Package G42Cloud.SDK.Vpc
+Install-Package FECloud.SDK.Vpc
 ```
 
 ## Code example
@@ -53,8 +53,8 @@ using System;
 using HuaweiCloud.SDK.Core;
 using HuaweiCloud.SDK.Core.Auth;
 // Import the specified {Service}, take Vpc as an example
-using G42Cloud.SDK.Vpc.V2;
-using G42Cloud.SDK.Vpc.V2.Model;
+using FECloud.SDK.Vpc.V2;
+using FECloud.SDK.Vpc.V2.Model;
 // Import the namespace for logging
 using Microsoft.Extensions.Logging;
 
@@ -112,9 +112,9 @@ namespace ConsoleApp1
 ## Changelog
 
 Detailed changes for each released version are documented in
-the [CHANGELOG.md](https://github.com/g42cloud-sdk/g42cloud-sdk-net/blob/master/CHANGELOG.md).
+the [CHANGELOG.md](https://github.com/fecloud-sdk/fecloud-sdk-net/blob/master/CHANGELOG.md).
 
-## User Manual [:top:](#g42-cloud-net-software-development-kit-net-sdk)
+## User Manual [:top:](#fe-cloud-net-software-development-kit-net-sdk)
 
 * [1. Client Configuration](#1-client-configuration-top)
     * [1.1 Default Configuration](#11-default-configuration-top)
@@ -150,7 +150,7 @@ Use network proxy if needed.
 - Only HTTP proxy is supported if you have assigned proxy port when configuring proxy.
 
 ``` csharp
-config.ProxyHost = "proxy.g42cloud.com";
+config.ProxyHost = "proxy.fecloud.com";
 // assign proxy port
 config.ProxyPort = 8080;
 config.ProxyUsername = "test";
@@ -160,7 +160,7 @@ config.ProxyPassword = "test";
 - Both HTTP and HTTPS proxy are supported if proxy port is unassigned when configuring proxy.
 
 ``` csharp
-config.ProxyHost = "https://proxy.g42cloud.com:8080";
+config.ProxyHost = "https://proxy.fecloud.com:8080";
 config.ProxyUsername = "test";
 config.ProxyPassword = "test";
 ```
@@ -181,7 +181,7 @@ config.IgnoreSslVerification = true;
 
 ### 2. Credentials Configuration [:top:](#user-manual-top)
 
-There are two types of G42 Cloud services, `regional` services and `global` services.
+There are two types of FE Cloud services, `regional` services and `global` services.
 
 Global services contain IAM, TMS, EPS.
 
@@ -194,7 +194,7 @@ For `global` services' authentication, domainId is required to initialize Global
 - `ak` is the access key ID for your account.
 - `sk` is the secret access key for your account.
 - `projectId` is the ID of your project depending on the region you want to operate.
-- `domainId` is the account ID of G42 Cloud.
+- `domainId` is the account ID of FE Cloud.
 - `securityToken` is the security token when using temporary AK/SK.
 
 You could use permanent AK and SK **or** use temporary AK and SK and SecurityToken to complete credentials'
@@ -235,7 +235,7 @@ There are two ways to initialize the {Service}Client, you could choose one you p
 
 ``` csharp
 // Specify the endpoint, take the endpoint of VPC service in region of cn-north-4 for example
-String endpoint = "https://vpc.ae-ad-1.g42cloud.com";
+String endpoint = "https://vpc.ae-ad-1.fecloud.com";
 
 // Initialize the credentials, you should provide projectId or domainId in this way, take initializing BasicCredentials for example
 Credentials basicCredentials = new BasicCredentials(ak, sk, projectId);
@@ -338,9 +338,9 @@ After enabled log, the SDK will print the access log by default, every request w
 
 ``` text
 info: System.Net.Http.HttpClient.SdkHttpClient.LogicalHandler[100]
-      Start processing HTTP request GET https://vpc.ae-ad-1.g42cloud.com/v1/076958154900d2492f8bc0197405c803/vpcs?limit=1
+      Start processing HTTP request GET https://vpc.ae-ad-1.fecloud.com/v1/076958154900d2492f8bc0197405c803/vpcs?limit=1
 info: System.Net.Http.HttpClient.SdkHttpClient.ClientHandler[100]
-      Sending HTTP request GET https://vpc.ae-ad-1.g42cloud.com/v1/076958154900d2492f8bc0197405c803/vpcs?limit=1
+      Sending HTTP request GET https://vpc.ae-ad-1.fecloud.com/v1/076958154900d2492f8bc0197405c803/vpcs?limit=1
 info: System.Net.Http.HttpClient.SdkHttpClient.ClientHandler[101]
       Received HTTP response after 517.5326ms - OK
 info: System.Net.Http.HttpClient.SdkHttpClient.LogicalHandler[101]

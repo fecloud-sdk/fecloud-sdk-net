@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
@@ -16,15 +16,9 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ApiLink 
     {
 
-        /// <summary>
-        /// API的URL地址。
-        /// </summary>
         [JsonProperty("href", NullValueHandling = NullValueHandling.Ignore)]
         public string Href { get; set; }
 
-        /// <summary>
-        /// 默认值self。
-        /// </summary>
         [JsonProperty("rel", NullValueHandling = NullValueHandling.Ignore)]
         public string Rel { get; set; }
 

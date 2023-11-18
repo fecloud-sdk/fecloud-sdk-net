@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
@@ -16,15 +16,9 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class GenRandomRequestBody 
     {
 
-        /// <summary>
-        /// 随机数的bit位长度。 取值为8的倍数，取值范围为8~8192。 随机数的bit位长度，取值为“512”。
-        /// </summary>
         [JsonProperty("random_data_length", NullValueHandling = NullValueHandling.Ignore)]
         public string RandomDataLength { get; set; }
 
-        /// <summary>
-        /// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-        /// </summary>
         [JsonProperty("sequence", NullValueHandling = NullValueHandling.Ignore)]
         public string Sequence { get; set; }
 

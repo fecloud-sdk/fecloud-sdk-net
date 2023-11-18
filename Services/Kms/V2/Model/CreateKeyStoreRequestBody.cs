@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 创建专属密钥库请求体
@@ -16,21 +16,12 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class CreateKeyStoreRequestBody 
     {
 
-        /// <summary>
-        /// 专属密钥库别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与已有的专属密钥库别名重名。
-        /// </summary>
         [JsonProperty("keystore_alias", NullValueHandling = NullValueHandling.Ignore)]
         public string KeystoreAlias { get; set; }
 
-        /// <summary>
-        /// DHSM集群Id，要求集群当前未创建专属密钥库。
-        /// </summary>
         [JsonProperty("hsm_cluster_id", NullValueHandling = NullValueHandling.Ignore)]
         public string HsmClusterId { get; set; }
 
-        /// <summary>
-        /// DHSM集群的CA证书
-        /// </summary>
         [JsonProperty("hsm_ca_cert", NullValueHandling = NullValueHandling.Ignore)]
         public string HsmCaCert { get; set; }
 

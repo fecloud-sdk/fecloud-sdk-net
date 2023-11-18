@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,9 +16,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ShowUserInstancesResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 非默认用户主密钥个数。
-        /// </summary>
         [JsonProperty("instance_num", NullValueHandling = NullValueHandling.Ignore)]
         public int? InstanceNum { get; set; }
 

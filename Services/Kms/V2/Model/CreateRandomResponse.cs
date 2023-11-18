@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,9 +16,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class CreateRandomResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 随机数16进制表示，两位表示1byte。随机数的长度与用户传入的参数 “random_data_length”的长度保持一致。
-        /// </summary>
         [JsonProperty("random_data", NullValueHandling = NullValueHandling.Ignore)]
         public string RandomData { get; set; }
 

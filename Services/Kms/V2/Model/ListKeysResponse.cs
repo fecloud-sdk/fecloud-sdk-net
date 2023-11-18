@@ -6,19 +6,15 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
     /// </summary>
     public class ListKeysResponse : SdkResponse
     {
-        /// <summary>
-        /// 是否还有下一页： - “true”表示还有数据。 - “false”表示已经是最后一页。
-        /// </summary>
-        /// <value>是否还有下一页： - “true”表示还有数据。 - “false”表示已经是最后一页。</value>
         [JsonConverter(typeof(EnumClassConverter<TruncatedEnum>))]
         public class TruncatedEnum
         {
@@ -131,32 +127,17 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
         }
 
 
-        /// <summary>
-        /// key_id列表。
-        /// </summary>
         [JsonProperty("keys", NullValueHandling = NullValueHandling.Ignore)]
         public List<string> Keys { get; set; }
 
-        /// <summary>
-        /// 密钥详情列表。详情参见KeyDetails
-        /// </summary>
         [JsonProperty("key_details", NullValueHandling = NullValueHandling.Ignore)]
         public List<KeyDetails> KeyDetails { get; set; }
 
-        /// <summary>
-        /// 获取下一页所需要传递的“marker”值。当“truncated”为“false”时，“next_marker”为空。
-        /// </summary>
         [JsonProperty("next_marker", NullValueHandling = NullValueHandling.Ignore)]
         public string NextMarker { get; set; }
 
-        /// <summary>
-        /// 是否还有下一页： - “true”表示还有数据。 - “false”表示已经是最后一页。
-        /// </summary>
         [JsonProperty("truncated", NullValueHandling = NullValueHandling.Ignore)]
         public TruncatedEnum Truncated { get; set; }
-        /// <summary>
-        /// 密钥总条数。
-        /// </summary>
         [JsonProperty("total", NullValueHandling = NullValueHandling.Ignore)]
         public int? Total { get; set; }
 

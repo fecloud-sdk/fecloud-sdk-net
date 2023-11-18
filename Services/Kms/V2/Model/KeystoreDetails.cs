@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 密钥库详情
@@ -16,39 +16,21 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class KeystoreDetails 
     {
 
-        /// <summary>
-        /// 密钥库ID
-        /// </summary>
         [JsonProperty("keystore_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeystoreId { get; set; }
 
-        /// <summary>
-        /// 用户域ID
-        /// </summary>
         [JsonProperty("domain_id", NullValueHandling = NullValueHandling.Ignore)]
         public string DomainId { get; set; }
 
-        /// <summary>
-        /// 密钥库别名
-        /// </summary>
         [JsonProperty("keystore_alias", NullValueHandling = NullValueHandling.Ignore)]
         public string KeystoreAlias { get; set; }
 
-        /// <summary>
-        /// 密钥库类型
-        /// </summary>
         [JsonProperty("keystore_type", NullValueHandling = NullValueHandling.Ignore)]
         public string KeystoreType { get; set; }
 
-        /// <summary>
-        /// DHSM集群id，要求集群当前未创建专属密钥库
-        /// </summary>
         [JsonProperty("hsm_cluster_id", NullValueHandling = NullValueHandling.Ignore)]
         public string HsmClusterId { get; set; }
 
-        /// <summary>
-        /// 密钥库创建时间，UTC时间戳。
-        /// </summary>
         [JsonProperty("create_time", NullValueHandling = NullValueHandling.Ignore)]
         public string CreateTime { get; set; }
 

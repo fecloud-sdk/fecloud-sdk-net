@@ -6,19 +6,15 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 密钥详情。
     /// </summary>
     public class KeyDetails 
     {
-        /// <summary>
-        /// 密钥生成算法。  - AES_256  - SM4  - RSA_2048  - RSA_3072  - RSA_4096  - EC_P256  - EC_P384  - SM2
-        /// </summary>
-        /// <value>密钥生成算法。  - AES_256  - SM4  - RSA_2048  - RSA_3072  - RSA_4096  - EC_P256  - EC_P384  - SM2</value>
         [JsonConverter(typeof(EnumClassConverter<KeySpecEnum>))]
         public class KeySpecEnum
         {
@@ -166,10 +162,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
             }
         }
 
-        /// <summary>
-        /// 密钥用途。 - ENCRYPT_DECRYPT - SIGN_VERIFY
-        /// </summary>
-        /// <value>密钥用途。 - ENCRYPT_DECRYPT - SIGN_VERIFY</value>
         [JsonConverter(typeof(EnumClassConverter<KeyUsageEnum>))]
         public class KeyUsageEnum
         {
@@ -281,10 +273,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
             }
         }
 
-        /// <summary>
-        /// 密钥来源，默认为“kms”，枚举如下：  - kms表示密钥材料由kms生成kms表示密钥材料由kms生成  - external表示密钥材料由外部导入
-        /// </summary>
-        /// <value>密钥来源，默认为“kms”，枚举如下：  - kms表示密钥材料由kms生成kms表示密钥材料由kms生成  - external表示密钥材料由外部导入</value>
         [JsonConverter(typeof(EnumClassConverter<OriginEnum>))]
         public class OriginEnum
         {
@@ -397,108 +385,54 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
         }
 
 
-        /// <summary>
-        /// 密钥ID。
-        /// </summary>
         [JsonProperty("key_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyId { get; set; }
 
-        /// <summary>
-        /// 用户域ID。
-        /// </summary>
         [JsonProperty("domain_id", NullValueHandling = NullValueHandling.Ignore)]
         public string DomainId { get; set; }
 
-        /// <summary>
-        /// 密钥别名。
-        /// </summary>
         [JsonProperty("key_alias", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyAlias { get; set; }
 
-        /// <summary>
-        /// 密钥区域。
-        /// </summary>
         [JsonProperty("realm", NullValueHandling = NullValueHandling.Ignore)]
         public string Realm { get; set; }
 
-        /// <summary>
-        /// 密钥生成算法。  - AES_256  - SM4  - RSA_2048  - RSA_3072  - RSA_4096  - EC_P256  - EC_P384  - SM2
-        /// </summary>
         [JsonProperty("key_spec", NullValueHandling = NullValueHandling.Ignore)]
         public KeySpecEnum KeySpec { get; set; }
-        /// <summary>
-        /// 密钥用途。 - ENCRYPT_DECRYPT - SIGN_VERIFY
-        /// </summary>
         [JsonProperty("key_usage", NullValueHandling = NullValueHandling.Ignore)]
         public KeyUsageEnum KeyUsage { get; set; }
-        /// <summary>
-        /// 密钥描述。
-        /// </summary>
         [JsonProperty("key_description", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyDescription { get; set; }
 
-        /// <summary>
-        /// 密钥创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
-        /// </summary>
         [JsonProperty("creation_date", NullValueHandling = NullValueHandling.Ignore)]
         public string CreationDate { get; set; }
 
-        /// <summary>
-        /// 密钥计划删除时间，时间戳，即从1970年1月1日至该时间的总秒数。
-        /// </summary>
         [JsonProperty("scheduled_deletion_date", NullValueHandling = NullValueHandling.Ignore)]
         public string ScheduledDeletionDate { get; set; }
 
-        /// <summary>
-        /// 密钥状态，满足正则匹配“^[1-5]{1}$”，枚举如下：  - “1”表示待激活状态  - “2”表示启用状态  - “3”表示禁用状态  - “4”表示计划删除状态  - “5”表示等待导入状态
-        /// </summary>
         [JsonProperty("key_state", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyState { get; set; }
 
-        /// <summary>
-        /// 默认主密钥标识，默认主密钥标识为1，非默认标识为0。
-        /// </summary>
         [JsonProperty("default_key_flag", NullValueHandling = NullValueHandling.Ignore)]
         public string DefaultKeyFlag { get; set; }
 
-        /// <summary>
-        /// 密钥类型。
-        /// </summary>
         [JsonProperty("key_type", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyType { get; set; }
 
-        /// <summary>
-        /// 密钥材料失效时间，时间戳，即从1970年1月1日至该时间的总秒数。
-        /// </summary>
         [JsonProperty("expiration_time", NullValueHandling = NullValueHandling.Ignore)]
         public string ExpirationTime { get; set; }
 
-        /// <summary>
-        /// 密钥来源，默认为“kms”，枚举如下：  - kms表示密钥材料由kms生成kms表示密钥材料由kms生成  - external表示密钥材料由外部导入
-        /// </summary>
         [JsonProperty("origin", NullValueHandling = NullValueHandling.Ignore)]
         public OriginEnum Origin { get; set; }
-        /// <summary>
-        /// 密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
-        /// </summary>
         [JsonProperty("key_rotation_enabled", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyRotationEnabled { get; set; }
 
-        /// <summary>
-        /// 企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
-        /// </summary>
         [JsonProperty("sys_enterprise_project_id", NullValueHandling = NullValueHandling.Ignore)]
         public string SysEnterpriseProjectId { get; set; }
 
-        /// <summary>
-        /// 密钥库ID
-        /// </summary>
         [JsonProperty("keystore_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeystoreId { get; set; }
 
-        /// <summary>
-        /// 密钥在加密机中的标签
-        /// </summary>
         [JsonProperty("key_label", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyLabel { get; set; }
 

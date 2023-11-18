@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,9 +16,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ShowVersionResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 描述version 对象的列表，详情请参见 ApiVersionDetail字段数据结构说明。
-        /// </summary>
         [JsonProperty("version", NullValueHandling = NullValueHandling.Ignore)]
         public Object Version { get; set; }
 

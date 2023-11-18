@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
@@ -16,39 +16,21 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ApiVersionDetail 
     {
 
-        /// <summary>
-        /// 版本ID（版本号），如“v1.0”。
-        /// </summary>
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         public string Id { get; set; }
 
-        /// <summary>
-        /// JSON对象，详情请参见links字段数据结构说明。
-        /// </summary>
         [JsonProperty("links", NullValueHandling = NullValueHandling.Ignore)]
         public List<ApiLink> Links { get; set; }
 
-        /// <summary>
-        /// 若该版本API支持微版本，则填支持的最大微版本号，如果不支持微版本，则返回空字符串。
-        /// </summary>
         [JsonProperty("version", NullValueHandling = NullValueHandling.Ignore)]
         public string Version { get; set; }
 
-        /// <summary>
-        /// 版本状态，包含如下3种：  - CURRENT：表示该版本为主推版本。  - SUPPORTED：表示为老版本，但是现在还继续支持。  - DEPRECATED：表示为废弃版本，存在后续删除的可能。
-        /// </summary>
         [JsonProperty("status", NullValueHandling = NullValueHandling.Ignore)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// 版本发布时间，要求用UTC时间表示。如v1.发布的时间2014-06-28T12:20:21Z。
-        /// </summary>
         [JsonProperty("updated", NullValueHandling = NullValueHandling.Ignore)]
         public string Updated { get; set; }
 
-        /// <summary>
-        /// 若该版本API 支持微版本，则填支持的最小微版本号，如果不支持微版本，则返回空字符串。
-        /// </summary>
         [JsonProperty("min_version", NullValueHandling = NullValueHandling.Ignore)]
         public string MinVersion { get; set; }
 

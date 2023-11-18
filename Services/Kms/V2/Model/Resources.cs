@@ -6,19 +6,15 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
     /// </summary>
     public class Resources 
     {
-        /// <summary>
-        /// 配额类型。枚举值说明:  - CMK，用户主密钥  - grant_per_CMK，单个用户主密钥可创建授权数
-        /// </summary>
-        /// <value>配额类型。枚举值说明:  - CMK，用户主密钥  - grant_per_CMK，单个用户主密钥可创建授权数</value>
         [JsonConverter(typeof(EnumClassConverter<TypeEnum>))]
         public class TypeEnum
         {
@@ -131,20 +127,11 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
         }
 
 
-        /// <summary>
-        /// 配额类型。枚举值说明:  - CMK，用户主密钥  - grant_per_CMK，单个用户主密钥可创建授权数
-        /// </summary>
         [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public TypeEnum Type { get; set; }
-        /// <summary>
-        /// 已使用配额数。
-        /// </summary>
         [JsonProperty("used", NullValueHandling = NullValueHandling.Ignore)]
         public int? Used { get; set; }
 
-        /// <summary>
-        /// 配额总数。
-        /// </summary>
         [JsonProperty("quota", NullValueHandling = NullValueHandling.Ignore)]
         public int? Quota { get; set; }
 

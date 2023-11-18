@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Request Object
@@ -16,9 +16,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class DecryptDataRequest 
     {
 
-        /// <summary>
-        /// 
-        /// </summary>
         [SDKProperty("body", IsBody = true)]
         [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
         public DecryptDataRequestBody Body { get; set; }

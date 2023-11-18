@@ -1,5 +1,4 @@
-# 0.0.1-beta 2023-06-30
-
+# 0.0.2-beta 2023-11-05
 ### FECloud SDK KMS
 
 - _Features_
@@ -7,4 +6,4 @@
 - _Bug Fix_
   - None
 - _Change_
-  - None 
+  - None

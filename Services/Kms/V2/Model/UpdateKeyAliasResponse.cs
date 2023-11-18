@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,9 +16,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class UpdateKeyAliasResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 
-        /// </summary>
         [JsonProperty("key_info", NullValueHandling = NullValueHandling.Ignore)]
         public KeyAliasInfo KeyInfo { get; set; }
 

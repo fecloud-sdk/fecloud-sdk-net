@@ -2,8 +2,8 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <AssemblyName>HuaweiCloud.SDK.Kms</AssemblyName>
-        <PackageId>HuaweiCloud.SDK.Kms</PackageId>
+        <AssemblyName>FeCloud.SDK.Kms</AssemblyName>
+        <PackageId>FeCloud.SDK.Kms</PackageId>
         <TargetFramework>netstandard2.0</TargetFramework>
         <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
         <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
@@ -14,12 +14,12 @@
         <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
         <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
         <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-        <PackageId>HuaweiCloud.SDK.Kms</PackageId>
-        <Version>0.0.1-beta</Version>
-        <Authors>HuaweiCloud</Authors>
-        <Copyright>Copyright 2023 Huawei Technologies Co., Ltd.</Copyright>
-        <Company>Huawei Technologies Co., Ltd.</Company>
-        <Description>HuaweiCloud .net SDK</Description>
+        <PackageId>FeCloud.SDK.Kms</PackageId>
+        <Version>0.0.2-beta</Version>
+        <Authors>FeCloud</Authors>
+        <Copyright>Copyright 2023 Fe Technologies Co., Ltd.</Copyright>
+        <Company>Fe Technologies Co., Ltd.</Company>
+        <Description>FeCloud .net SDK</Description>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
     <ItemGroup>

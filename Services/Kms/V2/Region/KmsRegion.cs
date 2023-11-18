@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2
+namespace FeCloud.SDK.Kms.V2
 {
     public class KmsRegion
     {

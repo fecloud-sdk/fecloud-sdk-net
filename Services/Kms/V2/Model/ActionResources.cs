@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
@@ -16,27 +16,15 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ActionResources 
     {
 
-        /// <summary>
-        /// 资源ID。
-        /// </summary>
         [JsonProperty("resource_id", NullValueHandling = NullValueHandling.Ignore)]
         public string ResourceId { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         [JsonProperty("resource_detail", NullValueHandling = NullValueHandling.Ignore)]
         public KeyDetails ResourceDetail { get; set; }
 
-        /// <summary>
-        /// 资源名称，默认为空字符串。
-        /// </summary>
         [JsonProperty("resource_name", NullValueHandling = NullValueHandling.Ignore)]
         public string ResourceName { get; set; }
 
-        /// <summary>
-        /// 标签列表，没有标签，数组默认为空。
-        /// </summary>
         [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
         public List<TagItem> Tags { get; set; }
 

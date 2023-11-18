@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,9 +16,6 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class CreateGrantResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 授权ID，64字节。
-        /// </summary>
         [JsonProperty("grant_id", NullValueHandling = NullValueHandling.Ignore)]
         public string GrantId { get; set; }
 

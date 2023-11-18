@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// Response Object
@@ -16,15 +16,9 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
     public class ListKeyStoresResponse : SdkResponse
     {
 
-        /// <summary>
-        /// 密钥库总数
-        /// </summary>
         [JsonProperty("total", NullValueHandling = NullValueHandling.Ignore)]
         public int? Total { get; set; }
 
-        /// <summary>
-        /// 密钥详情列表。详情参见KeystoreDetails
-        /// </summary>
         [JsonProperty("keystores", NullValueHandling = NullValueHandling.Ignore)]
         public List<KeystoreDetails> Keystores { get; set; }
 

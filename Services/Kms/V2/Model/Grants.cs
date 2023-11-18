@@ -6,19 +6,15 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using FeCloud.SDK.Core;
 
-namespace HuaweiCloud.SDK.Kms.V2.Model
+namespace FeCloud.SDK.Kms.V2.Model
 {
     /// <summary>
     /// 
     /// </summary>
     public class Grants 
     {
-        /// <summary>
-        /// 授权类型。 有效值：“user”，“domain”。
-        /// </summary>
-        /// <value>授权类型。 有效值：“user”，“domain”。</value>
         [JsonConverter(typeof(EnumClassConverter<GranteePrincipalTypeEnum>))]
         public class GranteePrincipalTypeEnum
         {
@@ -131,56 +127,29 @@ namespace HuaweiCloud.SDK.Kms.V2.Model
         }
 
 
-        /// <summary>
-        /// 密钥ID。
-        /// </summary>
         [JsonProperty("key_id", NullValueHandling = NullValueHandling.Ignore)]
         public string KeyId { get; set; }
 
-        /// <summary>
-        /// 授权ID，64字节。
-        /// </summary>
         [JsonProperty("grant_id", NullValueHandling = NullValueHandling.Ignore)]
         public string GrantId { get; set; }
 
-        /// <summary>
-        /// 被授权用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-        /// </summary>
         [JsonProperty("grantee_principal", NullValueHandling = NullValueHandling.Ignore)]
         public string GranteePrincipal { get; set; }
 
-        /// <summary>
-        /// 授权类型。 有效值：“user”，“domain”。
-        /// </summary>
         [JsonProperty("grantee_principal_type", NullValueHandling = NullValueHandling.Ignore)]
         public GranteePrincipalTypeEnum GranteePrincipalType { get; set; }
-        /// <summary>
-        /// 授权允许的操作列表。 有效的值：“create-datakey”，“create-datakey-without-plaintext”，“encrypt-datakey”，“decrypt-datakey”，“describe-key”，“create-grant”，“retire-grant”，“encrypt-data”，“decrypt-data”。 有效值不能仅为“create-grant”。
-        /// </summary>
         [JsonProperty("operations", NullValueHandling = NullValueHandling.Ignore)]
         public List<string> Operations { get; set; }
 
-        /// <summary>
-        /// 创建授权用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-        /// </summary>
         [JsonProperty("issuing_principal", NullValueHandling = NullValueHandling.Ignore)]
         public string IssuingPrincipal { get; set; }
 
-        /// <summary>
-        /// 创建时间，时间戳，即从1970年1月1日至该时间的总秒数。 例如：1497341531000
-        /// </summary>
         [JsonProperty("creation_date", NullValueHandling = NullValueHandling.Ignore)]
         public string CreationDate { get; set; }
 
-        /// <summary>
-        /// 授权名字，取值1到255字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”。
-        /// </summary>
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// 可退役授权的用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-        /// </summary>
         [JsonProperty("retiring_principal", NullValueHandling = NullValueHandling.Ignore)]
         public string RetiringPrincipal { get; set; }
 
