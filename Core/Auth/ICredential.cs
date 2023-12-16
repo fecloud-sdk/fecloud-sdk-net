@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2023 FE Technologies Co.,Ltd.
+ * Copyright 2023 Fe Technologies Co.,Ltd.
  * 
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -22,7 +22,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FECloud.SDK.Core.Auth
+namespace FeCloud.SDK.Core.Auth
 {
     public interface ICredential
     {

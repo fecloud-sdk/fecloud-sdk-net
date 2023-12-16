@@ -17,7 +17,7 @@
 using System;
 using System.Text;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public partial class Signer
     {

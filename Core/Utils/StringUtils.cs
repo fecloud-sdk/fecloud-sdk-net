@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public class StringUtils
     {

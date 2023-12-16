@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2020 FE Technologies Co.,Ltd.
+ * Copyright 2020 Fe Technologies Co.,Ltd.
  * 
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -30,7 +30,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public class SdkHttpClient
     {
@@ -44,7 +44,7 @@ namespace FECloud.SDK.Core
         {
             var serviceProvider = GetServiceCollection(config, logging, logLevel).BuildServiceProvider();
             var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
-            _logger = loggerFactory.CreateLogger("FECloud.Sdk");
+            _logger = loggerFactory.CreateLogger("FeCloud.Sdk");
             var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
             _myHttpClient = httpClientFactory.CreateClient("SdkHttpClient");
             _httpHandler = httpHandler;

@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2023 FE Technologies Co.,Ltd.
+ * Copyright 2023 Fe Technologies Co.,Ltd.
  * 
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -23,7 +23,7 @@ using Org.BouncyCastle.Crypto.Digests;
 using Org.BouncyCastle.Crypto.Macs;
 using Org.BouncyCastle.Crypto.Parameters;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     internal class Sm3Hasher : AbstractHasher
     {

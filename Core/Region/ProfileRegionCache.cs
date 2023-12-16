@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2023 FE Technologies Co.,Ltd.
+ * Copyright 2023 Fe Technologies Co.,Ltd.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -26,7 +26,7 @@ using System.IO;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     internal class ProfileRegionCache
     {

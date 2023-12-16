@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2020 FE Technologies Co.,Ltd.
+ * Copyright 2020 Fe Technologies Co.,Ltd.
  * 
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -22,7 +22,7 @@
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     [XmlRoot("Error")]
     public class SdkError : SdkResponse

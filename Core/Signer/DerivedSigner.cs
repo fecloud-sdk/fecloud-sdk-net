@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2023 FE Technologies Co.,Ltd.
+ * Copyright 2023 Fe Technologies Co.,Ltd.
  * 
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -24,9 +24,9 @@ using System.Globalization;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using FECloud.SDK.Core.Auth;
+using FeCloud.SDK.Core.Auth;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public class DerivedSigner : Signer
     {

@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2020 FE Technologies Co.,Ltd.
+ * Copyright 2020 Fe Technologies Co.,Ltd.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -24,12 +24,12 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace FECloud.SDK.Core.Auth
+namespace FeCloud.SDK.Core.Auth
 {
     public abstract class Credentials<T> : ICredential where T : Credentials<T>
     {
         private const string DEFAULT_ENDPOINT_REG =
-            "^[a-z][a-z0-9-]+(\\.[a-z]{2,}-[a-z]+-\\d{1,2})?\\.(my)?(fecloud|myhwclouds).(com|cn)";
+            "^[a-z][a-z0-9-]+(\\.[a-z]{2,}-[a-z]+-\\d{1,2})?\\.(my)?(orange-business).(com|cn)";
 
         public static Func<HttpRequest, bool> DefaultDerivedPredicate = httpRequest =>
             !Regex.IsMatch(httpRequest.Url.Host, DEFAULT_ENDPOINT_REG);

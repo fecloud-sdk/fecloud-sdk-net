@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public static class TaskUtils
     {

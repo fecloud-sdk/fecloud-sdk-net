@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace FECloud.SDK.Core.Auth
+namespace FeCloud.SDK.Core.Auth
 {
     public class ProfileCredentialProvider : ICredentialProvider
     {

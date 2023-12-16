@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Logging;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public class HttpHandler
     {

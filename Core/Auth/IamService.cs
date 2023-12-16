@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 FE Technologies Co.,Ltd.
+ * Copyright 2020 Fe Technologies Co.,Ltd.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -25,7 +25,7 @@ using System.Linq;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace FECloud.SDK.Core.Auth
+namespace FeCloud.SDK.Core.Auth
 {
     internal class Project
     {
@@ -59,7 +59,7 @@ namespace FECloud.SDK.Core.Auth
 
     public static class IamService
     {
-        public const string DefaultIamEndpoint = "https://iam.ae-ad-1.fecloud.com";
+        public const string DefaultIamEndpoint = "https://iam.eu-west-0.prod-cloud-ocb.orange-business.com";
         private const string KeystoneListProjectsUri = "/v3/projects";
         private const string KeystoneListAuthDomainsUri = "/v3/auth/domains";
 

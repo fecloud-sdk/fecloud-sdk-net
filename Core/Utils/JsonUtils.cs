@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2020 FE Technologies Co.,Ltd.
+ * Copyright 2020 Fe Technologies Co.,Ltd.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -26,7 +26,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public static class JsonUtils
     {

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <AssemblyName>FECloud.SDK.Core</AssemblyName>
-        <PackageId>FECloud.SDK.Core</PackageId>
+        <AssemblyName>FeCloud.SDK.Core</AssemblyName>
+        <PackageId>FeCloud.SDK.Core</PackageId>
         <TargetFramework>netstandard2.0</TargetFramework>
         <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
         <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
@@ -12,10 +12,10 @@
         <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
         <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
         <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-        <Authors>FECloud</Authors>
-        <Copyright>Copyright 2020 FE Technologies Co., Ltd.</Copyright>
-        <Company>FE Technologies Co., Ltd.</Company>
-        <Description>FECloud .net SDK</Description>
+        <Authors>FeCloud</Authors>
+        <Copyright>Copyright 2020 Fe Technologies Co., Ltd.</Copyright>
+        <Company>Fe Technologies Co., Ltd.</Company>
+        <Description>FeCloud .net SDK</Description>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 

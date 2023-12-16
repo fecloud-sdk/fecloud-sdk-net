@@ -15,7 +15,7 @@
         <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
         <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
         <PackageId>FeCloud.SDK.Kms</PackageId>
-        <Version>0.0.2-beta</Version>
+        <Version>0.0.3-beta</Version>
         <Authors>FeCloud</Authors>
         <Copyright>Copyright 2023 Fe Technologies Co., Ltd.</Copyright>
         <Company>Fe Technologies Co., Ltd.</Company>

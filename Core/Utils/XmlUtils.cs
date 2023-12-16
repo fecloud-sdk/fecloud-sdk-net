@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
-namespace FECloud.SDK.Core
+namespace FeCloud.SDK.Core
 {
     public class XmlUtils
     {
